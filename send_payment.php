@@ -72,5 +72,5 @@ $paymentQuery['mc_gross'] = number_format(219.97,2,'.',''); // TOTAL AMOUNT
 
 // GOTO PAYPAL
 $paymentQueryString = http_build_query($paymentQuery);
-header('Location: ' . _payment_url . $paymentQueryString);
+header('Location: ' . $_payment_url . $paymentQueryString);
 
