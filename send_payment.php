@@ -30,7 +30,7 @@ $_order_id = 123;
 #
 #  Payment Process
 #
-$_payment_url = ($_sandbox) ? 'https://www.sandbox.paypal.com/webscr?' : 'https://www.sandbox.paypal.com/webscr?';
+$_payment_url = ($_sandbox) ? 'https://www.sandbox.paypal.com/webscr?' : 'https://www.paypal.com/webscr?';
 
 // CONFIG BASIC SETTINGS
 $paymentQuery['business']      = $_paypal_account;
@@ -71,6 +71,6 @@ $paymentQuery['mc_gross'] = number_format(219.97,2,'.',''); // TOTAL AMOUNT
 
 
 // GOTO PAYPAL
-$paymentQueryString = http_build_query($paymentQuery);
+$paymentQueryString = http_build_query($paymentQuery,'','&');
 header('Location: ' . $_payment_url . $paymentQueryString);
 
