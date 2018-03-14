@@ -1,4 +1,5 @@
 <?php
+$sandbox = true; // change to false in production
 /*
  * USE THIS SCRIPT TO CREATE A SIMPLA PAYPAL PAYMENT REQUEST
  *  
@@ -32,7 +33,8 @@ foreach ($resultData as $key => $value) {
 }
 
 // 2) POST IPN DATA BACK TO PAYPAL TO VALIDATE
-$ch = curl_init('https://ipnpb.paypal.com/cgi-bin/webscr');
+$url = ($sandbox) ? 'https://ipnpb.sandbox.paypal.com/cgi-bin/webscr' : 'https://ipnpb.paypal.com/cgi-bin/webscr';
+$ch = curl_init($url);
 curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
