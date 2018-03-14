@@ -52,7 +52,8 @@ curl_close($ch);
 // 3) PROCESS VERIFICATION RESULT
 if (strcmp ($res, "VERIFIED") == 0) {
     $status = $_POST['payment_status']; // the status of the payment. If everything is fine it should be 'completed' else its mostly 'pending' then you can check the pending_reason parameter
-    $order_id = $_POST['txn_id']; // the order id defined in the send_payment.php file
+    $order_id = $_POST['invoice']; // the order id defined in the send_payment.php file
+  // if you need the paypal transaction id use $_POST['txn_id'];
 
     /**
      * YOUR LOGIC TO 
