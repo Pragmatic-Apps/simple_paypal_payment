@@ -64,7 +64,7 @@ $paymentQuery['amount_2'] = number_format(19.99,2,'.',''); // PRODUCT PRICE FOR 
 # [REPEAT FOR AS MANY PRODUCTS AS NECESSARY]
 
 // TOTALS
-//$paymentQuery['handling'] = number_format(6.90,2,'.',''); // OPTIONAL: SHIPPING COSTS IF NECESSARY
+//$paymentQuery['handling_cart'] = number_format(6.90,2,'.',''); // OPTIONAL: SHIPPING COSTS IF NECESSARY
 //$paymentQuery['tax_cart'] = number_format(6.90,2,'.',''); // OPTIONAL: TOTAL TAX AMOUNT
 //$paymentQuery['discount_amount_cart'] = number_format(6.90,2,'.',''); // OPTIONAL: DISCOUNT AMOUNT
 $paymentQuery['mc_gross'] = number_format(219.97,2,'.',''); // TOTAL AMOUNT 
