@@ -40,7 +40,7 @@ $paymentQuery['notify_url']    = $_ipn_callback_url;
 $paymentQuery['upload']    = 1;
 $paymentQuery['cmd']      = "_cart";
 $paymentQuery['currency_code'] = "EUR";
-$paymentQuery['invoice'] = _order_id;
+$paymentQuery['invoice'] = $_order_id;
 
 // ADDRESS SETTING
 $paymentQuery['address_override'] = 1;
